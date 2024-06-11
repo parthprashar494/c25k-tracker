@@ -7,28 +7,30 @@ body {
 
 #progress {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
 #progress div {
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
-    flex: 1 1 calc(33% - 40px); /* Adjusting the width dynamically */
-    min-width: 250px; /* Ensures a minimum width */
-    margin-bottom: 20px;
+    flex: 1 1 calc(33.333% - 10px); /* Adjusting the width dynamically */
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 @media (max-width: 768px) {
     #progress div {
-        flex: 1 1 100%; /* Takes full width on small screens */
+        flex: 1 1 calc(33.333% - 5px); /* Adjust width for small screens */
+        padding: 5px;
+        font-size: 0.9em;
     }
 }
 
 .workout {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .complete {
