@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+#progress {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#progress div {
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1 1 calc(33% - 40px); /* Adjusting the width dynamically */
+    min-width: 250px; /* Ensures a minimum width */
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    #progress div {
+        flex: 1 1 100%; /* Takes full width on small screens */
+    }
+}
+
+.workout {
+    margin-bottom: 20px;
+}
+
+.complete {
+    color: green;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
