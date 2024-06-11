@@ -8,22 +8,34 @@ body {
 #progress {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
-    justify-content: center;
 }
 
 #progress div {
     border: 1px solid #ccc;
     padding: 10px;
     box-sizing: border-box;
-    flex: 1 1 calc(33.33% - 40px); /* Adjusting the width dynamically */
+    flex: 0 0 calc(33.33% - 40px); /* Adjusting the width dynamically */
     max-width: calc(33.33% - 40px); /* Setting a maximum width */
 }
 
 @media (max-width: 768px) {
     #progress div {
-        flex: 1 1 calc(50% - 20px); /* Adjust width for small screens */
+        flex: 0 0 calc(50% - 20px); /* Adjust width for small screens */
         max-width: calc(50% - 20px); /* Setting a maximum width for small screens */
+    }
+
+    #progress div h3 {
+        font-size: 1em; /* Reduce font size for smaller screens */
+    }
+
+    #progress div .workout {
+        margin-bottom: 5px; /* Reduce margin for smaller screens */
+    }
+
+    #progress div .checkbox-label {
+        margin-bottom: 3px; /* Reduce margin for smaller screens */
     }
 }
 
